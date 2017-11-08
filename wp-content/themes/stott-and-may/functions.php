@@ -117,11 +117,19 @@ add_action( 'widgets_init', 'stott_and_may_widgets_init' );
  * Enqueue scripts and styles.
  */
 function stott_and_may_scripts() {
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css' );
+
 	wp_enqueue_style( 'stott-and-may-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'jquery-script', '//code.jquery.com/jquery-3.2.1.slim.min.js', true );
+
+	wp_enqueue_script( 'popper-script', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', true );
 
 	wp_enqueue_script( 'stott-and-may-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'stott-and-may-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -155,4 +163,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
