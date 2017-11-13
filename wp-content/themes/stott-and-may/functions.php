@@ -125,6 +125,12 @@ function stott_and_may_scripts() {
 
 	wp_enqueue_script( 'popper-script', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', true );
 
+	wp_enqueue_script( 'stott-and-may-fonts', get_template_directory_uri() . '/js/fonts.js', array(), true );
+
+	wp_enqueue_script( 'stott-and-may-custom-js', get_template_directory_uri() . '/js/custom.js', array('tweenmax-js'), true );
+
+	wp_enqueue_script( 'tweenmax-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js', array(), true );
+
 	wp_enqueue_script( 'stott-and-may-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'stott-and-may-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -163,3 +169,22 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/*****************************
+CUSTOM
+*****************************/
+
+// Before VC Init
+add_action( 'vc_before_init', 'vc_before_init_actions' );
+
+function vc_before_init_actions() {
+
+    // Require new custom Element
+    require_once( get_template_directory().'/vc-elements/hero-header.php' );
+		require_once( get_template_directory().'/vc-elements/fullwidth-video.php' );
+
+}
+
+define('WP_SCSS_ALWAYS_RECOMPILE', true);
+
+add_filter('show_admin_bar', '__return_false');

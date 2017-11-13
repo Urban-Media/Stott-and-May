@@ -12,6 +12,18 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
+#page {
+  position: relative;
+	z-index: 2;
+	transform: translate3d( 0, 0, 0 ); /* X, Y, Z */
+ 	-webkit-transform: translate3d( 0, 0, 0 );
+	background-color: #FFF;
+}
+
+.entry-content {
+	margin-top: 0!important;
+}
+
 hr {
 	background-color: $color__background-hr;
 	border: 0;
@@ -31,3 +43,191 @@ figure {
 }
 
 @import "tables";
+
+/*---------------------------------
+LIGHT PAGE VARIANT
+---------------------------------*/
+
+.light {
+	.nav-container {
+		.main-navigation {
+			.menu {
+				.menu-item {
+					a {
+						color: #FFF;
+					}
+					&.current-menu-item:after {
+						background-image: url(http://192.168.1.45/Stott-and-May/img/nav-lines-white.png);
+					}
+				}
+			}
+		}
+	}
+	.page-header-container {
+		.header-content {
+			.header-title {
+				color: #FFF;
+				&:before {
+					background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines-white.png');
+				}
+			}
+			.header-text {
+				color: #FFF;
+			}
+			.hero-btn {
+				border-color: #FFF;
+				color: #FFF;
+				&:hover {
+					color: $color__primary;
+				}
+				&:after {
+					background-color: #FFF;
+					background: #FFF;
+				}
+			}
+		}
+	}
+}
+
+/*---------------------------------
+PAGE HEADER COMPONENT
+---------------------------------*/
+
+.page-header-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+		position: relative;
+    height: 100vh;
+		.header-content {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			transform: translateY(-50%);
+			h1.header-title {
+			    font-size: 48px;
+					&:before {
+						content: " ";
+						background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+						display: block;
+						height: 5px;
+						width: 240px;
+						margin-bottom: 25px;
+					}
+					&.white:before {
+						background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines-white.png');
+					}
+			}
+			.header-text {
+				font-size: 18px;
+			}
+		}
+		.hero-btn {
+			background: none;
+			font-size: 18px;
+			padding: 15px 25px;
+			border-radius: 10px;
+			border-color: $color__primary;
+			color: $color__primary;
+			overflow: hidden;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+		  -o-transition: all 0.3s;
+			transition: all 0.3s;
+			position: relative;
+			&:after {
+			  background-color: $color__primary;
+			  height: 100%;
+			  left: -35%;
+			  top: 0;
+			  transform: skew(47deg);
+			  transition-duration: 0.6s;
+			  transform-origin: top left;
+			  width: 0;
+				background: $color__primary;
+			  content: ' ';
+			  position: absolute;
+			  z-index: -1;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+			  -o-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+			&:hover:after {
+				height: 100%;
+				width: 135%;
+			}
+			&:hover {
+				color: #FFF;
+			}
+		}
+}
+
+$grey: #fff;
+
+.scroll-prompt-container {
+		position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 40px;
+		.prompt {
+			width: 30px;
+			height: 50px;
+			border-radius: 30px;
+			border: 4px solid $grey;
+			margin: auto;
+			span {
+				width: 6px;
+				height: 10px;
+				border-radius: 10px;
+				background: $grey;
+				margin: 7px auto 0;
+				display: block;
+				animation:scrollMovement ease-in-out 2s 1.5s infinite;
+				-moz-animation:scrollMovement ease-in-out 2s 1.5s infinite;
+				-webkit-animation:scrollMovement ease-in-out 2s 1.5s infinite;
+			}
+		}
+}
+
+@keyframes scrollMovement {
+  from {transform: translate3d(0,0,0)}
+  to {transform: translate3d(0,10px,0)}
+}
+
+@-moz-keyframes scrollMovement /* Firefox */ {
+  from {transform: translate3d(0,0,0)}
+  to {transform: translate3d(0,10px,0)}
+}
+
+@-webkit-keyframes scrollMovement /* Safari and Chrome */ {
+  from {transform: translate3d(0,0,0)}
+  to {transform: translate3d(0,10px,0)}
+}
+
+/*---------------------------------
+FULLWIDTH BACKGROUND VIDEO COMPONENT
+---------------------------------*/
+.video-bg-container {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+		video#bgvid {
+		    position: relative;
+		    top: 50%;
+		    left: 50%;
+		    min-width: 100%;
+		    min-height: 100%;
+		    width: auto;
+		    height: auto;
+				object-fit: cover;
+		    z-index: -100;
+		    -ms-transform: translateX(-50%) translateY(-50%);
+		    -moz-transform: translateX(-50%) translateY(-50%);
+		    -webkit-transform: translateX(-50%) translateY(-50%);
+		    transform: translateX(-50%) translateY(-50%);
+		    background: url(polina.jpg) no-repeat;
+		    background-size: cover;
+		}
+}
