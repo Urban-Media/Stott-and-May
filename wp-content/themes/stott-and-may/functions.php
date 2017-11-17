@@ -117,15 +117,39 @@ add_action( 'widgets_init', 'stott_and_may_widgets_init' );
  * Enqueue scripts and styles.
  */
 function stott_and_may_scripts() {
+	wp_deregister_script('jquery');
+
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css' );
 
 	wp_enqueue_style( 'stott-and-may-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'jquery-script', '//code.jquery.com/jquery-3.2.1.slim.min.js', true );
+	wp_enqueue_style( 'simplelineicons', '//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css' );
+
+	wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.2.1.slim.min.js', true );
 
 	wp_enqueue_script( 'popper-script', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', true );
 
 	wp_enqueue_script( 'stott-and-may-fonts', get_template_directory_uri() . '/js/fonts.js', array(), true );
+
+	wp_enqueue_script( 'owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array(), true );
+
+	wp_enqueue_script( 'owl-carousel-animate', get_template_directory_uri() . '/js/owl.animate.js', array('owl-carousel-js'), true );
+
+	wp_enqueue_script( 'owl-carousel-autoheight', get_template_directory_uri() . '/js/owl.autoheight.js', array('owl-carousel-js'), true );
+
+	wp_enqueue_script( 'owl-carousel-autoplay', get_template_directory_uri() . '/js/owl.autoplay.js', array('owl-carousel-js'), true );
+
+	wp_enqueue_script( 'owl-carousel-autorefresh', get_template_directory_uri() . '/js/owl.autorefresh.js', array('owl-carousel-js'), true );
+
+	wp_enqueue_script( 'owl-carousel-hash', get_template_directory_uri() . '/js/owl.hash.js', array('owl-carousel-js'), true );
+
+	wp_enqueue_script( 'owl-carousel-lazyload', get_template_directory_uri() . '/js/owl.lazyload.js', array('owl-carousel-js'), true );
+
+	wp_enqueue_script( 'owl-carousel-navigation', get_template_directory_uri() . '/js/owl.navigation.js', array('owl-carousel-js'), true );
+
+	wp_enqueue_script( 'owl-carousel-support', get_template_directory_uri() . '/js/owl.support.js', array('owl-carousel-js'), true );
+
+	wp_enqueue_script( 'owl-carousel-video', get_template_directory_uri() . '/js/owl.video.js', array('owl-carousel-js'), true );
 
 	wp_enqueue_script( 'stott-and-may-custom-js', get_template_directory_uri() . '/js/custom.js', array('tweenmax-js'), true );
 
@@ -182,6 +206,7 @@ function vc_before_init_actions() {
     // Require new custom Element
     require_once( get_template_directory().'/vc-elements/hero-header.php' );
 		require_once( get_template_directory().'/vc-elements/fullwidth-video.php' );
+		require_once( get_template_directory().'/vc-elements/icon-carousel.php' );
 
 }
 

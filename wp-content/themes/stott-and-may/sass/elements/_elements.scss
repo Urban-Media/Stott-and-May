@@ -227,7 +227,59 @@ FULLWIDTH BACKGROUND VIDEO COMPONENT
 		    -moz-transform: translateX(-50%) translateY(-50%);
 		    -webkit-transform: translateX(-50%) translateY(-50%);
 		    transform: translateX(-50%) translateY(-50%);
-		    background: url(polina.jpg) no-repeat;
+		    /*background: url(polina.jpg) no-repeat;*/
 		    background-size: cover;
 		}
+}
+
+/*---------------------------------
+ICON CAROUSEL COMPONENT
+---------------------------------*/
+.owl-carousel {
+	padding: 60px 0;
+	.owl-item {
+		.item {
+			text-align: center;
+			img.icon-image {
+		    width: auto;
+				margin: 0 auto 20px auto;
+			}
+			h4 {
+				font-family: $font__main;
+				font-size: 18px;
+				font-weight: 400;
+				color: #58595b;
+			}
+		}
+	}
+	.owl-nav {
+		.owl-next {
+			background: none!important;
+			background-color: transparent!important;
+			padding: 0!important;
+			margin: 0!important;
+	    color: #000!important;
+	    width: 20px;
+	    overflow: hidden;
+			&:before {
+		    content: "\e606";
+		    font-family: 'simple-line-icons';
+		    font-size: 24px;
+			}
+		}
+		.owl-prev {
+			background: none!important;
+			background-color: transparent!important;
+			padding: 0!important;
+			margin: 0!important;
+	    color: #000!important;
+	    width: 20px;
+	    overflow: hidden;
+			&:before {
+		    content: "\e605";
+		    font-family: 'simple-line-icons';
+		    font-size: 24px;
+			}
+		}
+	}
 }
