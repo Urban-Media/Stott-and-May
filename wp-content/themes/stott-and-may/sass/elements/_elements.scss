@@ -253,6 +253,12 @@ ICON CAROUSEL COMPONENT
 		}
 	}
 	.owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+		margin-top: 0!important;
+		z-index: 5;
 		.owl-next {
 			background: none!important;
 			background-color: transparent!important;
@@ -261,6 +267,8 @@ ICON CAROUSEL COMPONENT
 	    color: #000!important;
 	    width: 20px;
 	    overflow: hidden;
+			float: right;
+    	margin-right: 30px!important;
 			&:before {
 		    content: "\e606";
 		    font-family: 'simple-line-icons';
@@ -275,6 +283,8 @@ ICON CAROUSEL COMPONENT
 	    color: #000!important;
 	    width: 20px;
 	    overflow: hidden;
+			float: left;
+    	margin-left: 30px!important;
 			&:before {
 		    content: "\e605";
 		    font-family: 'simple-line-icons';

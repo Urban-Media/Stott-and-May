@@ -96,6 +96,7 @@ class icon_carousel extends WPBakeryShortCode {
             jQuery(document).ready(function($){
               $(".owl-carousel").owlCarousel({
                 nav: true,
+                dots: false,
                 responsiveClass:true,
                 responsive:{
                   0:{

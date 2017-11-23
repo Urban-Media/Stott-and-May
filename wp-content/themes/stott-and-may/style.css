@@ -494,6 +494,13 @@ table {
   font-weight: 400;
   color: #58595b;
 }
+.owl-carousel .owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0 !important;
+}
 .owl-carousel .owl-nav .owl-next {
   background: none !important;
   background-color: transparent !important;
@@ -502,6 +509,8 @@ table {
   color: #000 !important;
   width: 20px;
   overflow: hidden;
+  float: right;
+  margin-right: 30px !important;
 }
 .owl-carousel .owl-nav .owl-next:before {
   content: "\e606";
@@ -516,6 +525,8 @@ table {
   color: #000 !important;
   width: 20px;
   overflow: hidden;
+  float: left;
+  margin-left: 30px !important;
 }
 .owl-carousel .owl-nav .owl-prev:before {
   content: "\e605";
