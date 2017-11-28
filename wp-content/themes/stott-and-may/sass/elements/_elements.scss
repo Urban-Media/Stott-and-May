@@ -1,3 +1,15 @@
+/*---------------------------------
+MOBILE VARIABLES
+---------------------------------*/
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 576px;
+
+
+/*---------------------------------
+GENERAL
+---------------------------------*/
 html {
 	box-sizing: border-box;
 }
@@ -42,6 +54,57 @@ figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.hero-btn {
+	background: none;
+	font-size: 18px;
+	padding: 15px 25px;
+	border-radius: 10px;
+	border-color: $color__primary;
+	color: $color__primary;
+	overflow: hidden;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	position: relative;
+	z-index: 2;
+	&.small {
+		padding: 10px 20px;
+	}
+	&:after {
+		background-color: $color__primary;
+		height: 100%;
+		left: -35%;
+		top: 0;
+		transform: skew(47deg);
+		transition-duration: 0.6s;
+		transform-origin: top left;
+		width: 0px;
+		background: $color__primary;
+		content: ' ';
+		position: absolute;
+		z-index: -1;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	&:hover:after {
+		height: 100%;
+		width: 135%;
+	}
+	&:hover {
+		color: #FFF;
+		border-color: $color__primary;
+	}
+}
+
 @import "tables";
 
 /*---------------------------------
@@ -73,17 +136,6 @@ LIGHT PAGE VARIANT
 			}
 			.header-text {
 				color: #FFF;
-			}
-			.hero-btn {
-				border-color: #FFF;
-				color: #FFF;
-				&:hover {
-					color: $color__primary;
-				}
-				&:after {
-					background-color: #FFF;
-					background: #FFF;
-				}
 			}
 		}
 	}
@@ -120,45 +172,6 @@ PAGE HEADER COMPONENT
 			}
 			.header-text {
 				font-size: 18px;
-			}
-		}
-		.hero-btn {
-			background: none;
-			font-size: 18px;
-			padding: 15px 25px;
-			border-radius: 10px;
-			border-color: $color__primary;
-			color: $color__primary;
-			overflow: hidden;
-			-webkit-transition: all 0.3s;
-			-moz-transition: all 0.3s;
-		  -o-transition: all 0.3s;
-			transition: all 0.3s;
-			position: relative;
-			&:after {
-			  background-color: $color__primary;
-			  height: 100%;
-			  left: -35%;
-			  top: 0;
-			  transform: skew(47deg);
-			  transition-duration: 0.6s;
-			  transform-origin: top left;
-			  width: 0;
-				background: $color__primary;
-			  content: ' ';
-			  position: absolute;
-			  z-index: -1;
-				-webkit-transition: all 0.3s;
-				-moz-transition: all 0.3s;
-			  -o-transition: all 0.3s;
-				transition: all 0.3s;
-			}
-			&:hover:after {
-				height: 100%;
-				width: 135%;
-			}
-			&:hover {
-				color: #FFF;
 			}
 		}
 }
@@ -235,61 +248,224 @@ FULLWIDTH BACKGROUND VIDEO COMPONENT
 /*---------------------------------
 ICON CAROUSEL COMPONENT
 ---------------------------------*/
-.owl-carousel {
+.icon-carousel-container {
 	padding: 60px 0;
-	.owl-item {
-		.item {
-			text-align: center;
-			img.icon-image {
-		    width: auto;
-				margin: 0 auto 20px auto;
+	.icon-carousel-title {
+		padding-bottom: 40px;
+		width: 50%;
+		&:before {
+			content: " ";
+			background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+			display: block;
+			height: 5px;
+			width: 240px;
+			margin-bottom: 25px;
+		}
+	}
+	.hero-btn {
+		margin-top: 40px;
+	}
+	.owl-carousel {
+		.owl-stage-outer {
+			position: relative;
+			.owl-item {
+				.item {
+					text-align: center;
+					img.icon-image {
+				    width: auto;
+						margin: 0 auto 20px auto;
+						position: relative;
+						z-index: 6;
+					}
+					h4 {
+						font-family: $font__main;
+						font-size: 18px;
+						font-weight: 400;
+						color: #58595b;
+					}
+				}
 			}
-			h4 {
-				font-family: $font__main;
-				font-size: 18px;
-				font-weight: 400;
-				color: #58595b;
+		}
+		.owl-nav {
+	    width: 100%;
+			margin-top: 0!important;
+			.owl-next {
+				background: none!important;
+				background-color: transparent!important;
+				padding: 0!important;
+				margin: 0!important;
+		    color: #000!important;
+		    width: 20px;
+		    overflow: hidden;
+				float: right;
+	    	margin-right: 30px!important;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				&:before {
+			    content: "\e606";
+			    font-family: 'simple-line-icons';
+			    font-size: 24px;
+				}
+			}
+			.owl-prev {
+				background: none!important;
+				background-color: transparent!important;
+				padding: 0!important;
+				margin: 0!important;
+		    color: #000!important;
+		    width: 20px;
+		    overflow: hidden;
+				float: left;
+	    	margin-left: 30px!important;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				&:before {
+			    content: "\e605";
+			    font-family: 'simple-line-icons';
+			    font-size: 24px;
+				}
 			}
 		}
 	}
-	.owl-nav {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-		margin-top: 0!important;
-		z-index: 5;
-		.owl-next {
-			background: none!important;
-			background-color: transparent!important;
-			padding: 0!important;
-			margin: 0!important;
-	    color: #000!important;
-	    width: 20px;
-	    overflow: hidden;
-			float: right;
-    	margin-right: 30px!important;
-			&:before {
-		    content: "\e606";
-		    font-family: 'simple-line-icons';
-		    font-size: 24px;
+}
+
+/*---------------------------------
+BLOG POSTS COMPONENT
+---------------------------------*/
+.blog-posts-container {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-size: auto 120%;
+	background-position: center right;
+	background-repeat: no-repeat;
+	h2.blog-posts-title {
+		padding-bottom: 40px;
+		width: 50%;
+		&:before {
+			content: " ";
+			background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+			display: block;
+			height: 5px;
+			width: 240px;
+			margin-bottom: 25px;
+		}
+	}
+	.hero-btn {
+		margin-top: 40px;
+	}
+	.post-container {
+		width:100%;
+		.blog-post {
+			border-radius: 10px;
+	    background-color: #F5f5f5;
+			text-align: center;
+			display: block;
+			overflow: hidden;
+			-webkit-transition: all 1s; /* Safari */
+			transition: all 1s;
+			&:hover {
+				background-color: $color__primary;
+				-webkit-transition: all 1s; /* Safari */
+    		transition: all 1s;
+				.blog-post-image {
+					opacity: 0.75;
+					-webkit-transition: all 1s; /* Safari */
+	    		transition: all 1s;
+				}
+				.post-title {
+					color: #FFF;
+				}
+			}
+			.blog-post-image {
+				height: 200px;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			span {
+				padding-top: 20px;
+				display: block;
+				color: #8c8d8f;
+				&:before {
+			    content: " ";
+			    background-image: url('//192.168.1.45/Stott-and-May/img/category-dotted-line-left.png');
+			    width: 22px;
+			    height: 2px;
+			    display: inline-block;
+			    vertical-align: middle;
+			    margin-top: -1px;
+			    margin-right: 7px;
+				}
+				&:after {
+					content: " ";
+					background-image: url('//192.168.1.45/Stott-and-May/img/category-dotted-line-right.png');
+					width: 22px;
+					height: 2px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-top: -1px;
+					margin-left: 7px;
+				}
+			}
+			.post-title {
+				margin: 0;
+				padding-bottom: 25px;
+				display: block;
+				color: #000000;
 			}
 		}
-		.owl-prev {
-			background: none!important;
-			background-color: transparent!important;
-			padding: 0!important;
-			margin: 0!important;
-	    color: #000!important;
-	    width: 20px;
-	    overflow: hidden;
-			float: left;
-    	margin-left: 30px!important;
-			&:before {
-		    content: "\e605";
-		    font-family: 'simple-line-icons';
-		    font-size: 24px;
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+  .blog-posts-container {
+		background-image: none!important;
+		.blog-posts-title {
+			width: 100%!important;
+		}
+		.post-container {
+			.blog-post {
+				margin-bottom: 20px;
 			}
 		}
+		.hero-btn {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+/*---------------------------------
+RESOURCE DOWNLOAD
+---------------------------------*/
+.resource-download-container {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-size: cover;
+	background-position: center right;
+	background-repeat: no-repeat;
+	h2.resource-download-title {
+		padding-bottom: 40px;
+		&:before {
+			content: " ";
+			background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+			display: block;
+			height: 5px;
+			width: 240px;
+			margin-bottom: 25px;
+		}
+		&.white {
+			color: #FFF;
+			&:before {
+				background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines-white.png');
+			}
+		}
+	}
+	.content_container {
+		color: #FFF;
 	}
 }

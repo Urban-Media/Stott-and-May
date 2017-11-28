@@ -110,6 +110,33 @@ function stott_and_may_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Column 1', 'stott-and-may' ),
+		'id'            => 'footer-column-1',
+		'description'   => esc_html__( 'This is the first column in the footer.', 'stott-and-may' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Column 2', 'stott-and-may' ),
+		'id'            => 'footer-column-2',
+		'description'   => esc_html__( 'This is the second column in the footer.', 'stott-and-may' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Column 3', 'stott-and-may' ),
+		'id'            => 'footer-column-3',
+		'description'   => esc_html__( 'This is the third column in the footer.', 'stott-and-may' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'stott_and_may_widgets_init' );
 
@@ -207,6 +234,8 @@ function vc_before_init_actions() {
     require_once( get_template_directory().'/vc-elements/hero-header.php' );
 		require_once( get_template_directory().'/vc-elements/fullwidth-video.php' );
 		require_once( get_template_directory().'/vc-elements/icon-carousel.php' );
+		require_once( get_template_directory().'/vc-elements/blog-posts.php' );
+		require_once( get_template_directory().'/vc-elements/resource-download.php' );
 
 }
 

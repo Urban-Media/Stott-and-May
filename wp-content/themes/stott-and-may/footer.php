@@ -14,17 +14,21 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'stott-and-may' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'stott-and-may' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'stott-and-may' ), 'stott-and-may', '<a href="https://urbanmedia.co.uk">Urban Media</a>' );
-			?>
-		</div><!-- .site-info -->
+
+		<div class="container footer-widgets">
+			<div class="col-12 col-sm-4">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Column 1") ) : ?>
+				<?php endif;?>
+			</div>
+			<div class="col-12 col-sm-4">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Column 2") ) : ?>
+				<?php endif;?>
+			</div>
+			<div class="col-12 col-sm-4">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Column 3") ) : ?>
+				<?php endif;?>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
