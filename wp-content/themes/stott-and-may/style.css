@@ -354,6 +354,57 @@ table {
   width: 100%;
 }
 /*---------------------------------
+ FOOTER
+ ---------------------------------*/
+footer.site-footer .footer-illustration {
+  position: relative;
+}
+footer.site-footer .footer-illustration:after {
+  content: " ";
+  width: 100%;
+  height: 57%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-color: #58595b;
+  z-index: 5;
+}
+footer.site-footer .footer-illustration .skyline_background {
+  background-image: url("//192.168.1.45/Stott-and-May/img/skyline_background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 20.5%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+footer.site-footer .footer-widgets {
+  background-color: #2f444a;
+  color: #fff;
+  padding: 50px 0 26px 0;
+}
+footer.site-footer .footer-widgets .widget {
+  text-align: center;
+}
+footer.site-footer .footer-widgets .widget .widget-title {
+  font-size: 18px;
+}
+footer.site-footer .footer-widgets .widget a {
+  color: #fff;
+}
+footer.site-footer .footer-widgets .widget a:hover {
+  opacity: 0.75;
+}
+@media (max-width: 576px) {
+  footer.site-footer .footer-widgets .row > div:last-child .widget {
+    border-bottom: 0;
+  }
+  footer.site-footer .footer-widgets .widget {
+    border-bottom: 1px solid #4b6269;
+  }
+}
+/*---------------------------------
  LIGHT PAGE VARIANT
  ---------------------------------*/
 .light .nav-container .main-navigation .menu .menu-item a {
@@ -667,7 +718,7 @@ table {
   }
 }
 /*---------------------------------
- RESOURCE DOWNLOAD
+ RESOURCE DOWNLOAD COMPONENT
  ---------------------------------*/
 .resource-download-container {
   padding-top: 60px;
@@ -695,6 +746,26 @@ table {
 }
 .resource-download-container .content_container {
   color: #fff;
+}
+/*---------------------------------
+ PERSON OUTLINE COMPONENT
+ ---------------------------------*/
+.person-outline-container {
+  padding-top: 60px;
+}
+.person-outline-container h2.person-outline-title {
+  padding-bottom: 40px;
+}
+.person-outline-container h2.person-outline-title:before {
+  content: " ";
+  background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+  display: block;
+  height: 5px;
+  width: 240px;
+  margin-bottom: 25px;
+}
+.person-outline-container .content_container {
+  padding-bottom: 60px;
 }
 /*--------------------------------------------------------------
  # Forms

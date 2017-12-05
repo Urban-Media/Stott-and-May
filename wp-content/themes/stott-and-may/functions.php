@@ -236,6 +236,7 @@ function vc_before_init_actions() {
 		require_once( get_template_directory().'/vc-elements/icon-carousel.php' );
 		require_once( get_template_directory().'/vc-elements/blog-posts.php' );
 		require_once( get_template_directory().'/vc-elements/resource-download.php' );
+		require_once( get_template_directory().'/vc-elements/person-outline.php' );
 
 }
 
