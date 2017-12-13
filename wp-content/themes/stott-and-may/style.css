@@ -767,6 +767,365 @@ footer.site-footer .footer-widgets .widget a:hover {
 .person-outline-container .content_container {
   padding-bottom: 60px;
 }
+/*---------------------------------
+ BASIC TEXT COMPONENT
+ ---------------------------------*/
+.text-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.text-container h2.basic-text-title {
+  color: #d5137c;
+  margin-bottom: 40px;
+}
+/*---------------------------------
+ HEADLINE TEXT COMPONENT
+ ---------------------------------*/
+.headline-container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.headline-container .content_container {
+  color: #fff;
+}
+.headline-container .content_container h2 {
+  font-size: 48px;
+}
+@media (max-width: 768px) {
+  .headline-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .headline-container .content_container h2 {
+    font-size: 24px;
+  }
+}
+/*---------------------------------
+ SLIDESHOW COMPONENT
+ ---------------------------------*/
+.slideshow-container {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slideshow-container .slideshow-title {
+  padding-bottom: 20px;
+}
+.slideshow-container .slideshow-title:before {
+  content: " ";
+  background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+  display: block;
+  height: 5px;
+  width: 240px;
+  margin-bottom: 25px;
+}
+/*---------------------------------
+ VIDEO LIGHTBOX COMPONENT
+ ---------------------------------*/
+.video-lb-container.short {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.video-lb-container.regular {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.video-lb-container.tall {
+  height: 100vh;
+}
+.video-lb-container .container {
+  height: 100%;
+}
+.video-lb-container .container .row {
+  height: 100%;
+}
+.video-lb-container .container .row .video-lb-title {
+  padding-bottom: 20px;
+}
+.video-lb-container .container .row .video-lb-title:before {
+  content: " ";
+  background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+  display: block;
+  height: 5px;
+  width: 240px;
+  margin-bottom: 25px;
+}
+/*---------------------------------
+ STOTTERS COMPONENT
+ ---------------------------------*/
+.stotters-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.stotters-container .stotters-title {
+  padding-bottom: 30px;
+}
+.stotters-container .stotters-title:before {
+  content: " ";
+  background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+  display: block;
+  height: 5px;
+  width: 240px;
+  margin-bottom: 25px;
+}
+.stotters-container .hero-btn {
+  margin-top: 70px;
+}
+.stotters-container .post-container .stotter {
+  margin-bottom: 30px;
+}
+.stotters-container .post-container .stotter .blog-post-image {
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  padding-top: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  background-size: contain;
+  background-position: center bottom;
+}
+.stotters-container .post-container .stotter .blog-post-image:hover .stotter-overlay {
+  opacity: 1;
+  -webkit-transition: all 1s;
+  /* Safari */
+  transition: all 1s;
+}
+.stotters-container .post-container .stotter .blog-post-image .stotter-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(213, 19, 124, 0.75);
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  /* Safari */
+  transition: all 1s;
+}
+.stotters-container .post-container .stotter .blog-post-image .stotter-overlay .stotter-info {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.stotters-container .post-container .stotter .blog-post-image .stotter-overlay .stotter-info .post-title {
+  font-size: 24px;
+  color: #fff;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+}
+.stotters-container .post-container .stotter .blog-post-image .stotter-overlay .stotter-info h4 {
+  font-size: 16px;
+  color: #fff;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+}
+/*---------------------------------
+ SLANTED IMAGE COMPONENT
+ ---------------------------------*/
+.slanted-container {
+  position: relative;
+}
+.slanted-container .slanted-image-container {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+}
+.slanted-container .slanted-image-container.right {
+  right: 0;
+}
+.slanted-container .slanted-image-container.right .slanted-image .image {
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+.slanted-container .slanted-image-container.right .slanted-image:after {
+  transform: scaleX(-1);
+  left: -10.4%;
+}
+.slanted-container .slanted-image-container .slanted-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+.slanted-container .slanted-image-container .slanted-image.blue:after {
+  background-image: url('//192.168.1.45/Stott-and-May/img/dotted_line_blue.png');
+}
+.slanted-container .slanted-image-container .slanted-image.pink:after {
+  background-image: url('//192.168.1.45/Stott-and-May/img/dotted_line_pink.png');
+}
+.slanted-container .slanted-image-container .slanted-image.white:after {
+  background-image: url('//192.168.1.45/Stott-and-May/img/dotted_line_white.png');
+}
+.slanted-container .slanted-image-container .slanted-image:after {
+  content: " ";
+  background-image: url('//192.168.1.45/Stott-and-May/img/dotted_line_blue.png');
+  background-position: top;
+  display: block;
+  width: 167px;
+  height: 100%;
+  position: absolute;
+  left: 89.5%;
+}
+.slanted-container .slanted-image-container .slanted-image .image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: center;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  /* left top */
+  /* right top */
+  /* right bottom */
+  /* left bottom */
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  /* left top */
+  /* right top */
+  /* right bottom */
+  /* left bottom */
+}
+.slanted-container .content-container {
+  padding-top: 7.711%;
+  padding-bottom: 7.711%;
+}
+.slanted-container .content-container .slanted-text-title {
+  padding-bottom: 30px;
+}
+.slanted-container .content-container .slanted-text-title:before {
+  content: " ";
+  background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+  display: block;
+  height: 5px;
+  width: 240px;
+  margin-bottom: 25px;
+}
+.slanted-container .content-container .slanted-text-title.light {
+  font-weight: 700;
+  color: #fff;
+}
+.slanted-container .content-container .slanted-text-title.light:before {
+  background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines-white.png');
+}
+.slanted-container .content-container .content ol {
+  margin: 0;
+  counter-reset: item;
+  position: relative;
+}
+.slanted-container .content-container .content ol li {
+  display: block;
+}
+.slanted-container .content-container .content ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: #d5137c;
+  position: absolute;
+  left: 0;
+}
+.slanted-container .content-container .content.light {
+  color: #fff;
+}
+.slanted-container .content-container .content.light .hero-btn {
+  border-color: #fff;
+  color: #fff;
+}
+.slanted-container .content-container .content.light .hero-btn:hover {
+  border-color: #fff;
+  color: #d5137c;
+}
+.slanted-container .content-container .content.light .hero-btn:after {
+  background-color: #fff;
+  background: #fff;
+}
+@media (max-width: 1200px) {
+  .slanted-container .slanted-image:after {
+    right: -107px;
+  }
+}
+/*---------------------------------
+ CHARTS COMPONENT
+ ---------------------------------*/
+.chart-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.chart-container .light .star_title {
+  color: #fff;
+}
+.chart-container .light .stars .icon-star {
+  color: #fff;
+}
+.chart-container .chart-title {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 44px;
+}
+.chart-container .chart-title.light {
+  color: #fff;
+  font-weight: 700;
+}
+.chart-container .star_title {
+  text-align: center;
+}
+.chart-container .stars {
+  margin-top: 40px;
+  text-align: center;
+}
+.chart-container .stars .icon-star {
+  font-size: 36px;
+}
+.chart-container .stars.one_star .icon-star:nth-child(-n+1) {
+  color: yellow;
+}
+.chart-container .stars.two_star .icon-star:nth-child(-n+2) {
+  color: yellow;
+}
+.chart-container .stars.three_star .icon-star:nth-child(-n+3) {
+  color: yellow;
+}
+.chart-container .stars.four_star .icon-star:nth-child(-n+4) {
+  color: yellow;
+}
+.chart-container .stars.five_star .icon-star:nth-child(-n+5) {
+  color: yellow;
+}
+.chart-container .wrapper {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+.chart-container .wrapper .container {
+  flex: 1;
+  padding: 0 20px;
+}
+.chart-container .wrapper h4 {
+  color: #fff;
+  position: absolute;
+  width: 50%;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.chart-container .wrapper.light .container.chart text {
+  fill: #fff;
+}
+.chart-container .wrapper.light h4 {
+  color: #fff;
+}
+.chart-container .wrapper.light h6 {
+  color: #fff;
+}
 /*--------------------------------------------------------------
  # Forms
  --------------------------------------------------------------*/
@@ -839,25 +1198,25 @@ a:hover, a:active {
   padding-left: 0;
 }
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
   top: 100%;
-  left: -999em;
+  opacity: 0;
   z-index: 99999;
 }
 .main-navigation ul ul ul {
-  left: -999em;
+  display: none;
   top: 0;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
+  opacity: 1;
 }
 .main-navigation ul ul a {
   width: 200px;
 }
 .main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
-  left: auto;
+  opacity: 1;
 }
 .main-navigation li {
   float: left;
@@ -872,9 +1231,6 @@ a:hover, a:active {
   display: block;
 }
 @media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
   .main-navigation ul {
     display: block;
   }
@@ -901,20 +1257,58 @@ header {
   z-index: 10;
 }
 header .nav-container {
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding: 0;
 }
 header .nav-container .main-navigation .menu {
   float: right;
 }
 header .nav-container .main-navigation .menu .menu-item {
-  padding: 0 25px;
+  padding: 13px 25px;
 }
 header .nav-container .main-navigation .menu .menu-item a {
   color: #000;
 }
 header .nav-container .main-navigation .menu .menu-item:hover a {
   color: #d5137c;
+}
+header .nav-container .main-navigation .menu .menu-item .sub-menu {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 0;
+  font-size: 16px;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+header .nav-container .main-navigation .menu .menu-item .sub-menu:before {
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white;
+  top: -20px;
+  left: 50%;
+  opacity: 1;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  content: " ";
+  position: absolute;
+}
+header .nav-container .main-navigation .menu .menu-item .sub-menu .menu-item {
+  padding: 5px 15px;
+}
+header .nav-container .main-navigation .menu .menu-item .sub-menu .menu-item:hover a {
+  color: #000;
+}
+header .nav-container .main-navigation .menu .menu-item .sub-menu .menu-item a {
+  color: #666;
 }
 header .nav-container .main-navigation .menu .current-menu-item:after {
   content: " ";
@@ -982,7 +1376,7 @@ header .nav-container .main-navigation .menu .current-menu-item:after {
   width: 240px;
 }
 .mobile-menu .menu .menu-item a {
-  padding: 25px;
+  padding: 10px;
   display: block;
   text-decoration: none;
   color: #000;
@@ -1003,7 +1397,6 @@ header .nav-container .main-navigation .menu .current-menu-item:after {
   overflow: hidden;
 }
 .menu-toggle {
-  display: none;
   cursor: pointer;
   user-select: none;
   padding: 20px;
@@ -1105,6 +1498,23 @@ header .nav-container .main-navigation .menu .current-menu-item:after {
  */
 .menu-visible #page {
   right: 240px;
+}
+@media (max-width: 1200px) {
+  .mobile-menu .main-navigation .menu .menu-item a {
+    color: #d5137c;
+    padding: 10px 25px;
+  }
+  .mobile-menu .main-navigation .menu .menu-item .sub-menu {
+    opacity: 1;
+    display: block;
+    box-shadow: none;
+    position: relative;
+  }
+  .mobile-menu .main-navigation .menu .menu-item .sub-menu .menu-item a {
+    padding: 0 25px;
+    color: #666;
+    width: auto;
+  }
 }
 /*--------------------------------------------------------------
  # Accessibility

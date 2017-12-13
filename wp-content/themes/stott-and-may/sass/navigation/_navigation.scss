@@ -17,19 +17,59 @@ header {
   position: absolute;
   z-index: 10;
   .nav-container {
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding: 0;
     .main-navigation {
       .menu {
         float: right;
         .menu-item {
-          padding: 0 25px;
+          padding: 13px 25px;
           a {
             color: $color__text-main;
           }
           &:hover {
             a {
               color: $color__primary;
+            }
+          }
+          .sub-menu {
+            background-color: #FFF;
+            border-radius: 10px;
+            padding: 5px 0;
+            font-size: 16px;
+            -ms-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            left: 50%;
+            -webkit-transition: .25s ease;
+            transition: .25s ease;
+            &:before {
+              width: 0;
+              height: 0;
+              border-width: 10px;
+              border-style: solid;
+              border-color: transparent transparent white;
+              top: -20px;
+              left: 50%;
+              opacity: 1;
+              -webkit-transition: .20s ease;
+              transition: .20s ease;
+              -ms-transform: translateX(-50%);
+              -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+              pointer-events: none;
+              content: " ";
+              position: absolute;
+            }
+            .menu-item {
+              padding: 5px 15px;
+              &:hover {
+                a {
+                  color: #000;
+                }
+              }
+              a {
+                color: #666;
+              }
             }
           }
         }
@@ -103,7 +143,7 @@ header {
       float: left;
       width: 240px;
       a {
-        padding: 25px;
+        padding: 10px;
         display: block;
         text-decoration: none;
         color: #000;
@@ -131,7 +171,6 @@ header {
 }
 
 .menu-toggle {
-  display: none;
   @media (max-width: 768px) {
     display: block;
   }
@@ -257,4 +296,32 @@ header {
  */
 .menu-visible #page {
   right: 240px;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .mobile-menu {
+    .main-navigation {
+      .menu {
+        .menu-item {
+          a {
+            color: #d5137c;
+            padding: 10px 25px;
+          }
+          .sub-menu {
+            opacity: 1;
+            display: block;
+            box-shadow: none;
+            position: relative;
+            .menu-item {
+              a {
+                padding: 0 25px;
+                color: #666;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

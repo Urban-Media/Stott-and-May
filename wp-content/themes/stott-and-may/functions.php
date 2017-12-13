@@ -152,6 +152,10 @@ function stott_and_may_scripts() {
 
 	wp_enqueue_style( 'simplelineicons', '//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css' );
 
+	wp_enqueue_style( 'bxslider-style', '//cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css' );
+
+	wp_enqueue_style( 'fancybox-style', get_template_directory_uri() . '/fancybox-master/jquery.fancybox.min.css' );
+
 	wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.2.1.slim.min.js', true );
 
 	wp_enqueue_script( 'popper-script', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', true );
@@ -178,6 +182,8 @@ function stott_and_may_scripts() {
 
 	wp_enqueue_script( 'owl-carousel-video', get_template_directory_uri() . '/js/owl.video.js', array('owl-carousel-js'), true );
 
+	wp_enqueue_script( 'chart-script', get_template_directory_uri() . '/js/chart.js', array('jquery'), true );
+
 	wp_enqueue_script( 'stott-and-may-custom-js', get_template_directory_uri() . '/js/custom.js', array('tweenmax-js'), true );
 
 	wp_enqueue_script( 'tweenmax-js', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js', array(), true );
@@ -187,6 +193,10 @@ function stott_and_may_scripts() {
 	wp_enqueue_script( 'stott-and-may-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', true );
+
+	wp_enqueue_script( 'bxslider-script', '//cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', true );
+
+	wp_enqueue_script( 'fancybox-script', get_template_directory_uri() . '/fancybox-master/jquery.fancybox.min.js', array('jquery'), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -227,9 +237,7 @@ CUSTOM
 
 // Before VC Init
 add_action( 'vc_before_init', 'vc_before_init_actions' );
-
 function vc_before_init_actions() {
-
     // Require new custom Element
     require_once( get_template_directory().'/vc-elements/hero-header.php' );
 		require_once( get_template_directory().'/vc-elements/fullwidth-video.php' );
@@ -237,9 +245,84 @@ function vc_before_init_actions() {
 		require_once( get_template_directory().'/vc-elements/blog-posts.php' );
 		require_once( get_template_directory().'/vc-elements/resource-download.php' );
 		require_once( get_template_directory().'/vc-elements/person-outline.php' );
-
+		require_once( get_template_directory().'/vc-elements/basic-text.php' );
+		require_once( get_template_directory().'/vc-elements/headline-text.php' );
+		require_once( get_template_directory().'/vc-elements/slideshow.php' );
+		require_once( get_template_directory().'/vc-elements/video-lightbox.php' );
+		require_once( get_template_directory().'/vc-elements/stotters.php' );
+		require_once( get_template_directory().'/vc-elements/slanted-image.php' );
+		require_once( get_template_directory().'/vc-elements/charts.php' );
+		require_once( get_template_directory().'/vc-elements/image-row.php' );
 }
-
 define('WP_SCSS_ALWAYS_RECOMPILE', true);
 
+/*****************************/
+
+//Hide Admin Bar
 add_filter('show_admin_bar', '__return_false');
+
+/*****************************/
+
+add_action( 'init', 'create_markets_nonhierarchical_taxonomy', 0 );
+
+function create_markets_nonhierarchical_taxonomy() {
+	$labels = array(
+		'name' => _x( 'Markets', 'taxonomy general name' ),
+	  'singular_name' => _x( 'Market', 'taxonomy singular name' ),
+	  'search_items' =>  __( 'Search Markets' ),
+	  'popular_items' => __( 'Popular Markets' ),
+	  'all_items' => __( 'All Markets' ),
+	  'parent_item' => null,
+	  'parent_item_colon' => null,
+	  'edit_item' => __( 'Edit Market' ),
+	  'update_item' => __( 'Update Market' ),
+	  'add_new_item' => __( 'Add New Market' ),
+	  'new_item_name' => __( 'New Market Name' ),
+	  'separate_items_with_commas' => __( 'Separate markets with commas' ),
+	  'add_or_remove_items' => __( 'Add or remove markets' ),
+	  'choose_from_most_used' => __( 'Choose from the most used markets' ),
+	  'menu_name' => __( 'Markets' ),
+	);
+
+	// Now register the non-hierarchical taxonomy like tag
+	register_taxonomy('markets','post',array(
+		'hierarchical' => false,
+	  'labels' => $labels,
+	  'show_ui' => true,
+	  'show_admin_column' => true,
+	  'update_count_callback' => '_update_post_term_count',
+	  'query_var' => true,
+	  'rewrite' => array( 'slug' => 'market' ),
+	));
+}
+
+/*****************************/
+
+// Our custom post type function
+function create_posttype() {
+	register_post_type( 'stotters',
+	// CPT Options
+  	array(
+    	'labels' => array(
+      	'name' => __( 'Stotters' ),
+        'singular_name' => __( 'Stotter' ),
+				'all_items' => __( 'All Stotters'),
+				'view_item' => __( 'View Stotter'),
+				'add_new_item' => __( 'Add New Stotter' ),
+				'add_new' => __( 'Add New' ),
+				'edit_item' => __( 'Edit Stotter' ),
+      ),
+			'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', ),
+			'taxonomies' => array( 'markets' ),
+			'hierarchical' => false,
+      'public' => true,
+			'menu_position' => 20,
+			'has_archive'         => true,
+			'menu_icon' => 'dashicons-universal-access',
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'stotters'),
+    )
+  );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );

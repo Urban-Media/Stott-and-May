@@ -36,9 +36,8 @@
 <?php endif; ?>
 
 <body <?php body_class(); ?>>
-	<div class="mobile-menu d-block d-sm-none">
+	<div class="mobile-menu d-xl-none">
 		<nav id="site-navigation" class="main-navigation">
-
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -52,26 +51,19 @@
 
 	<header id="masthead" class="site-header container-fluid">
 		<div class="row">
-			<div class="site-branding col-sm-3 col-10">
+			<div class="site-branding col-xl-3 col-10">
 				<?php if( get_field('navigation_hero_colour') == 'light' ): ?>
 					<img src="<?php echo site_url(); ?>/img/logo-white.png">
 				<?php else: ?>
 					<img src="<?php echo site_url(); ?>/img/logo.png">
 				<?php endif; ?>
 			</div><!-- .site-branding -->
-			<div class="col-2 d-block d-sm-none">
-				<!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<div id="hamburger">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</button>-->
-			<button type="button" class="menu-toggle visible-xs" aria-label="Toggle Mobile Menu">
-      	<span class="burger-lines"></span>
-	    </button>
+			<div class="col-2 d-xl-none">
+				<button type="button" class="menu-toggle" aria-label="Toggle Mobile Menu">
+	      	<span class="burger-lines"></span>
+		    </button>
 			</div>
-			<div class="nav-container col-sm-9 col-12 d-none d-sm-block">
+			<div class="nav-container col-sm-9 col-12 d-none d-xl-block">
 				<nav id="site-navigation" class="main-navigation">
 
 					<?php

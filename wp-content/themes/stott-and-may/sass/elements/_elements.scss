@@ -551,3 +551,421 @@ PERSON OUTLINE COMPONENT
 		padding-bottom: 60px;
 	}
 }
+
+/*---------------------------------
+BASIC TEXT COMPONENT
+---------------------------------*/
+.text-container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+	h2.basic-text-title {
+		color: $color__primary;
+		margin-bottom: 40px;
+	}
+}
+
+/*---------------------------------
+HEADLINE TEXT COMPONENT
+---------------------------------*/
+.headline-container {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	.content_container {
+		color: #FFF;
+		h2 {
+			font-size: 48px;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	.headline-container {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		.content_container {
+			h2 {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+/*---------------------------------
+SLIDESHOW COMPONENT
+---------------------------------*/
+.slideshow-container {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	.slideshow-title {
+		padding-bottom: 20px;
+		&:before {
+			content: " ";
+			background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+			display: block;
+			height: 5px;
+			width: 240px;
+			margin-bottom: 25px;
+		}
+	}
+	.content_container {
+
+	}
+}
+
+/*---------------------------------
+VIDEO LIGHTBOX COMPONENT
+---------------------------------*/
+.video-lb-container {
+	&.short {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	&.regular {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+	&.tall {
+		height: 100vh;
+	}
+	.container {
+		height: 100%;
+		.row {
+	    height: 100%;
+			.video-lb-title {
+				padding-bottom: 20px;
+				&:before {
+					content: " ";
+					background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+					display: block;
+					height: 5px;
+					width: 240px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+
+/*---------------------------------
+STOTTERS COMPONENT
+---------------------------------*/
+.stotters-container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	.stotters-title {
+		padding-bottom: 30px;
+		&:before {
+			content: " ";
+			background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+			display: block;
+			height: 5px;
+			width: 240px;
+			margin-bottom: 25px;
+		}
+	}
+	.hero-btn {
+		margin-top: 70px;
+	}
+	.post-container {
+		.stotter {
+			margin-bottom: 30px;
+			.blog-post-image {
+				border-radius: 10px;
+				background-color: #F5F5F5;
+				padding-top: 100%;
+				width: 100%;
+				display: block;
+				position: relative;
+				background-size: contain;
+    		background-position: center bottom;
+				&:hover {
+					.stotter-overlay {
+						opacity: 1;
+						-webkit-transition: all 1s; /* Safari */
+		    		transition: all 1s;
+					}
+				}
+				.stotter-overlay {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					text-align: center;
+					background-color: rgba(213, 19, 124, 0.75);
+    			border-radius: 10px;
+					opacity: 0;
+					-webkit-transition: all 1s; /* Safari */
+	    		transition: all 1s;
+					.stotter-info {
+						margin: 0;
+						position: absolute;
+						width: 100%;
+						top: 50%;
+						transform: translateY(-50%);
+						.post-title {
+							font-size: 24px;
+							color: #FFF;
+							font-family: "lato", sans-serif;
+							font-weight: 300;
+						}
+						h4 {
+							font-size: 16px;
+							color: #FFF;
+							font-family: "lato", sans-serif;
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*---------------------------------
+SLANTED IMAGE COMPONENT
+---------------------------------*/
+.slanted-container {
+	position: relative;
+	.slanted-image-container {
+		position: absolute;
+    height: 100%;
+    width: 50%;
+		&.right {
+			right: 0;
+			.slanted-image {
+				.image {
+					-webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    			clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+				}
+				&:after {
+					transform: scaleX(-1);
+					left: -10.4%;
+				}
+			}
+		}
+		.slanted-image {
+			width: 100%;
+			height: 100%;
+			display: block;
+			overflow: hidden;
+			&.blue {
+				&:after {
+					background-image: url('//192.168.1.45/Stott-and-May/img/dotted_line_blue.png');
+				}
+			}
+			&.pink {
+				&:after {
+					background-image: url('//192.168.1.45/Stott-and-May/img/dotted_line_pink.png');
+				}
+			}
+			&.white {
+				&:after {
+					background-image: url('//192.168.1.45/Stott-and-May/img/dotted_line_white.png');
+				}
+			}
+			&:after {
+				content: " ";
+				background-image: url('//192.168.1.45/Stott-and-May/img/dotted_line_blue.png');
+				background-position: top;
+				display: block;
+				width: 167px;
+				height: 100%;
+				position: absolute;
+				left: 89.5%;
+			}
+			.image {
+				width: 100%;
+		    height: 100%;
+		    position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-position: center;
+	    	background-size: cover;
+				-webkit-clip-path: polygon(0 0, /* left top */ 90% 0, /* right top */ 100% 100%, /* right bottom */ 0 100% /* left bottom */ );
+				clip-path: polygon(0 0, /* left top */ 90% 0, /* right top */ 100% 100%, /* right bottom */ 0 100% /* left bottom */ );
+			}
+		}
+	}
+	.content-container {
+		padding-top: 7.711%;
+		padding-bottom: 7.711%;
+		.slanted-text-title {
+			padding-bottom: 30px;
+			&:before {
+				content: " ";
+				background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines.png');
+				display: block;
+				height: 5px;
+				width: 240px;
+				margin-bottom: 25px;
+			}
+			&.light {
+				font-weight: 700;
+				color: #FFF;
+				&:before {
+					background-image: url('//192.168.1.45/Stott-and-May/img/title-dotted-lines-white.png');
+				}
+			}
+		}
+		.content {
+			ol {
+				margin: 0;
+				counter-reset: item;
+    		position: relative;
+				li {
+					display: block;
+					&:before {
+						content: counter(item) ". ";
+				    counter-increment: item;
+				    color: $color__primary;
+				    position: absolute;
+				    left: 0;
+					}
+				}
+			}
+			&.light {
+				color: #FFF;
+				.hero-btn {
+					border-color: #ffffff;
+    			color: #ffffff;
+					&:hover {
+						border-color: #FFF;
+						color: #d5137c;
+					}
+					&:after {
+						background-color: #FFF;
+						background: #FFF;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint-lg) {
+	.slanted-container {
+		.slanted-image {
+			&:after {
+				right: -107px;
+			}
+		}
+		.content-container {
+
+		}
+	}
+}
+
+/*---------------------------------
+CHARTS COMPONENT
+---------------------------------*/
+.chart-container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	.light {
+		.star_title {
+			color: #FFF;
+		}
+		.stars {
+			.icon-star {
+				color: #FFF;
+			}
+		}
+	}
+	.chart-title {
+		padding-bottom: 30px;
+		text-align: center;
+		font-size: 44px;
+		&.light {
+			color: #FFF;
+			font-weight: 700;
+		}
+	}
+	.star_title {
+		text-align: center;
+	}
+	.stars {
+		margin-top: 40px;
+    text-align: center;
+		.icon-star {
+			font-size: 36px;
+		}
+		&.one_star {
+			.icon-star {
+				&:nth-child(-n+1) {
+					color: yellow;
+				}
+			}
+		}
+		&.two_star {
+			.icon-star {
+				&:nth-child(-n+2) {
+					color: yellow;
+				}
+			}
+		}
+		&.three_star {
+			.icon-star {
+				&:nth-child(-n+3) {
+					color: yellow;
+				}
+			}
+		}
+		&.four_star {
+			.icon-star {
+				&:nth-child(-n+4) {
+					color: yellow;
+				}
+			}
+		}
+		&.five_star {
+			.icon-star {
+				&:nth-child(-n+5) {
+					color: yellow;
+				}
+			}
+		}
+	}
+	.wrapper {
+		width: 100%;
+		height: 100%;
+		margin: auto;
+		text-align: center;
+		position: relative;
+		.container {
+			flex: 1;
+			padding: 0 20px;
+		}
+		h4 {
+			color: #fff;
+	    position: absolute;
+	    width: 50%;
+	    top: 65%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+		}
+		&.light {
+			.container.chart {
+				text {
+		    	fill: #FFF;
+				}
+			}
+			h4 {
+				color: #FFF;
+			}
+			h6 {
+				color: #FFF;
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint-lg) {
+	
+}

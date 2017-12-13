@@ -4,3 +4,55 @@
 11/28/17 12:11:13: style.scss - unclosed block: failed at `` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 412
 11/28/17 12:11:16: style.scss - unclosed block: failed at `` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 412
 11/28/17 12:11:16: style.scss - unclosed block: failed at `` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 412
+12/06/17 2:10:29: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:10:33: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:10:33: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:10:38: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:10:42: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:10:42: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:11:35: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:11:35: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:12:41: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:12:45: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:12:45: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:12:59: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:13:03: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/06/17 2:13:03: style.scss - Undefined variable $breakpoint-xl: line: 327
+12/11/17 10:20:02: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:05: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:06: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:09: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:12: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:12: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:49: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:52: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:52: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:20:57: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:21:00: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:21:00: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:21:03: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/11/17 10:21:03: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 9:43:52: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 9:55:52: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 9:59:40: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 10:00:01: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 10:00:08: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 10:00:08: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 10:03:23: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 10:03:26: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 10:03:26: style.scss - parse error: failed at `margin: 0` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 782
+12/13/17 2:46:35: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:46:38: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:46:38: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:47:05: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:47:08: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:47:09: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:48:30: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:48:34: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:48:34: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 931
+12/13/17 2:51:25: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 877
+12/13/17 2:51:28: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 877
+12/13/17 2:51:29: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 877
+12/13/17 2:52:58: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 877
+12/13/17 2:53:01: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 877
+12/13/17 2:53:01: style.scss - parse error: failed at `color: #FFF:` C:\wamp64\www\Stott-and-May/wp-content/themes/stott-and-may/sass/elements/_elements.scss on line 877

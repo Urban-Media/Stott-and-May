@@ -127,7 +127,7 @@ class vcInfoBox extends WPBakeryShortCode {
                        'Hide' => 'hide',
                      ),
                      'std'         => 'hide',
-                     'description' => __( 'Choose whether or not to show the scroll prompt mouse at the bottom of this component.', 'text-domain' ),
+                     'description' => __( 'Chooseto show or hide the button.', 'text-domain' ),
                      'group' => 'Content',
                  ),
 
